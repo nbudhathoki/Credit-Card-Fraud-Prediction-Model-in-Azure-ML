@@ -49,7 +49,8 @@ def main():
     run.log("No of Features Considered:", np.str(args.max_features))
     run.log("Bootstrap:", np.bool(args.bootstrap))
 
-    model = RandomForestClassifier(n_estimators=args.n_estimators, min_samples_split=args.min_samples_split, bootstrap=args.bootstrap, max_features=args.max_features).fit(X_train, y_train)
+    model = RandomForestClassifier (n_estimators=args.n_estimators, min_samples_split=args.min_samples_split, 
+        bootstrap=args.bootstrap, max_features=args.max_features).fit(X_train, y_train)
 
     accuracy = model.score(X_test, y_test)
     run.log("Accuracy", np.float(accuracy))
