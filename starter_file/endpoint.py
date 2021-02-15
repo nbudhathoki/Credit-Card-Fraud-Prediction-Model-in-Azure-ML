@@ -1,8 +1,8 @@
 import requests
 import json
 
-scoring_uri = 'http://55e99a01-4301-4eff-8047-386a650bed57.westus2.azurecontainer.io/score'
-key = 'gQVRFinWlwQmjGdddJmUG9kqrnsJOy87'
+scoring_uri = 'http://a028d0af-8809-4326-8e62-3988a24c0bb8.westus2.azurecontainer.io/score'
+key = 'COgeD28fx74IcpGwbnnniBiLSmoS7NpC' # Replace this with the API key for the web service
 
 data = {
     "data":[
