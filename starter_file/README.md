@@ -31,6 +31,10 @@ Exploratory Data Analyis (EDA) is very important during ML project. Pandas profi
 | ------- | ------ | 
 | <kbd><img src= "./images/data_stats.png"> </kbd> <br/> |  <kbd><img src= "./images/corelation.png"> </kbd> <br/>| 
 
+Pandas profiling generates detailed html report, which is added in the project folder. Below is the snapshot:
+
+<kbd><img src= "./images/eda_profiling.png"> </kbd> <br/> 
+
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
