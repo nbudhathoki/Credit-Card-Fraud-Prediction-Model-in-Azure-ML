@@ -77,7 +77,7 @@ The best model selected is Voting ensemble with accuracy of 0.98.
 
 I am training Logistic regression model for hyperdrive method of modeling. Logistic regression is a classification algorithm, used to predict a binary outcome based on a set of independent variables. A binary outcome is one where there are only two possible scenarios— either the event happens (1) or it does not happen (0). In our case, fraud(1) vs. non fraud (0). Independent variables are those variables or factors which may influence the outcome (or dependent variable).
 
-I have used random parameter sampling. In random sampling, hyperparameter values are randomly selected from the defined search space. It supports discrete and continuous hyperparameters. It also supports early termination of low-performance runs. Since random sampling selects random values from given range of values, the performance is fast, and therefore we can use random sampling for initial model run to test and then refine the search space with different values again. Grid search can be very resource expensive as it sweeps exhaustively over the search space.
+I have used random parameter sampling. In random sampling, hyperparameter values are randomly selected from the defined search space. It supports discrete and continuous hyperparameters. It also supports early termination of low-performance runs. Since random sampling selects random values from given range of values, the performance is fast.
 
 ### Results
 
@@ -88,7 +88,13 @@ I have used random parameter sampling. In random sampling, hyperparameter values
 ## Model Deployment
 Even though the accuracy is little bit higher in hyperdrive model, I have selected to deploy the AutoML model for two main reasons:
 1. Logistic regression make strong assumption that all features are linearly independent (which is not always the case).
-2. Comparatively ensemble models like Voting Ensemble (from AutoML) have low bias, and low variance, since the algorithm combines many weak learners to make a strong predictor.
+2. Comparatively ensemble models like Voting Ensemble (from AutoML) have lower bias because algorithm does not make simple assumptions like logistic regression, and lower variance because the algorithm combines many weak learners to make a strong predictor on unseen data.
+
+#### Azure Container Instance
+
+To deploy a model to Azure Container Instances, we need create a deployment configuration that describes the compute resources needed. For example, number of cores and memory. We also need an inference configuration, which describes the environment needed to host the model and web service.
+
+<kbd><img src= "./images/aci_deploy.png"> </kbd> <br/>
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
