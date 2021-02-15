@@ -63,6 +63,10 @@ The best model selected is Voting ensemble with accuracy of 0.98.
 
 <kbd><img src= "./images/automl_rundetails.png"> </kbd> <br/>
 
+#### Feature Importance
+
+<kbd><img src= "./images/top_features.png"> </kbd> <br/>
+
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
 
