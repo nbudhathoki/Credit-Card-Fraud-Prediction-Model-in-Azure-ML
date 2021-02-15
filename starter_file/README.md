@@ -85,11 +85,10 @@ I have used random parameter sampling. In random sampling, hyperparameter values
 
 <kbd><img src= "./images/hydrive_completed.png"> </kbd> <br/>
 
-
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
-
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+Even though the accuracy is little bit higher in hyperdrive model, I have selected to deploy the AutoML model for two main reasons:
+1. Logistic regression make strong assumption that all features are linearly independent (which is not always the case).
+2. Comparatively ensemble models like Voting Ensemble (from AutoML) have low bias, and low variance, since the algorithm combines many weak learners to make a strong predictor.
 
 ## Screen Recording
 *TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
