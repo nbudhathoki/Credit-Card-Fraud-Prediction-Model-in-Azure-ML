@@ -96,11 +96,16 @@ To deploy a model to Azure Container Instances, we need create a deployment conf
 
 <kbd><img src= "./images/aci_deploy.png"> </kbd> <br/>
 
+Key is enabled for security, and application insights is enabled for tracking logs. Screenshot from ML studio showing RestUI, and app insights link. 
+
+<kbd><img src= "./images/deployed_model.png"> </kbd> <br/>
+
+Two data points from test set is passed via endpoint.py file for scoring. Result in json is shown below:
+
+<kbd><img src= "./images/result_testdata.png"> </kbd> <br/>
+
+
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
