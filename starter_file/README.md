@@ -73,12 +73,18 @@ The best model selected is Voting ensemble with accuracy of 0.98.
 
 <kbd><img src= "./images/hyperdrive_flow.jpg"> </kbd> <br/>
 
+#### HyperDrive Config:
 
 I am training Logistic regression model for hyperdrive method of modeling. Logistic regression is a classification algorithm, used to predict a binary outcome based on a set of independent variables. A binary outcome is one where there are only two possible scenarios— either the event happens (1) or it does not happen (0). In our case, fraud(1) vs. non fraud (0). Independent variables are those variables or factors which may influence the outcome (or dependent variable).
 
+I have used random parameter sampling. In random sampling, hyperparameter values are randomly selected from the defined search space. It supports discrete and continuous hyperparameters. It also supports early termination of low-performance runs. Since random sampling selects random values from given range of values, the performance is fast, and therefore we can use random sampling for initial model run to test and then refine the search space with different values again. Grid search can be very resource expensive as it sweeps exhaustively over the search space.
+
 ### Results
 
-I have used random parameter sampling. In random sampling, hyperparameter values are randomly selected from the defined search space. It supports discrete and continuous hyperparameters. It also supports early termination of low-performance runs. Since random sampling selects random values from given range of values, the performance is fast, and therefore we can use random sampling for initial model run to test and then refine the search space with different values again. Grid search can be very resource expensive as it sweeps exhaustively over the search space.
+<kbd><img src= "./images/hyperdrive_running.png"> </kbd> <br/>
+
+<kbd><img src= "./images/hydrive_completed.png"> </kbd> <br/>
+
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
