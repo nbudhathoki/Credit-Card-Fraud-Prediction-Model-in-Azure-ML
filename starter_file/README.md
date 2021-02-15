@@ -40,10 +40,22 @@ Pandas profiling generates detailed html report, which is added in the project f
 <kbd><img src= "./images/eda_profiling.png"> </kbd> <br/> 
 
 ## Automated ML
-*TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+
+#### Auto ML architectural overview in Azure:
+
+<kbd><img src= "./images/automl_arc.png"> </kbd> <br/> 
+
+AutoMLConfig Class represents configuration for submitting an automated ML experiment in Azure Machine Learning. This configuration object contains and persists the parameters for configuring the experiment run, as well as the training data to be used at run time. Following are main parameters set for this experiment. The max run time is selected to be 30 minutes. This can be extended based on time and resources to commit. 
+
+One important thing to mention is that I selected 'AUC weighted' method for primary metric instead of regular accuracy. This is because from EDA, I have learned that the classes are imbalanced. There are only 1% data for fraud vs non-fraud. AUC weighted metric performs better in this situation. When computing the weighted area under the ROC curve, weights vary with the values of the true positive rate (TPrate) among regions in a bid to focus on the accuracy of minority class that is more important in common.
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+
+The best model selected is Voting ensemble with accuracy of 0.98.
+
+| **Confusion Matrix**| **ROC Curve** |
+| ------- | ------ | 
+| <kbd><img src= "./images/confusion_matrix.png"> </kbd> <br/> |  <kbd><img src= "./images/roc_curve.png"> </kbd> <br/>| 
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
