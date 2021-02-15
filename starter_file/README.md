@@ -112,5 +112,11 @@ Two data points from test set is passed via endpoint.py file for scoring. Result
 ## Screen Recording
 
 ## Standout Suggestions
-1. Explored Pandas Profiling package for indepth exploratory data analysis.
-2. Appli
+1. Explored Pandas Profiling package for indepth exploratory data analysis. It helps us generate html report with descriptive stats for all variables, including interactions among variables, corelation, missing values, and samples. [More info on pandas profiling](https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd/). Screenshot can be found below:
+
+<kbd><img src= "./images/example_pp.png"> </kbd> <br/>
+
+2. Application insights is enabled, and log analytics is explored. There is a SQL like language KQL (Kusto Query Language), also called azure data explorer. The log analytics service connects with application insights telemetry data for performance and usage analysis. Snapshot is added below:
+
+<kbd><img src= "./images/log_analytics.png"> </kbd> <br/>
+
