@@ -57,7 +57,11 @@ The best model selected is Voting ensemble with accuracy of 0.98.
 | ------- | ------ | 
 | <kbd><img src= "./images/confusion_matrix.png"> </kbd> <br/> |  <kbd><img src= "./images/roc_curve.png"> </kbd> <br/>| 
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+#### Run Details
+
+<kbd><img src= "./images/automl_runwidget.png"> </kbd> <br/>
+
+<kbd><img src= "./images/automl_rundetails.png"> </kbd> <br/>
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
