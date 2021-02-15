@@ -24,6 +24,13 @@ The data is publicly available (link is added above in data section), so I am no
 
 <kbd><img src= "./images/data_preview.png"> </kbd> <br/>
 
+### Exploratory Data Analysis
+Exploratory Data Analyis (EDA) is very important during ML project. Pandas profiling is a great python packaage that generates profile reports from a pandas DataFrame. The pandas df.describe() function is great but a little basic for serious exploratory data analysis. pandas_profiling extends the pandas DataFrame with df.profile_report() for quick data analysis.
+
+| **Descriptive Stats**| **Corelation Heatmap** |
+| ------- | ------ | 
+| <kbd><img src= "./images/data_stats.png"> </kbd> <br/> |  <kbd><img src= "./images/corelation.png"> </kbd> <br/>| 
+
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
