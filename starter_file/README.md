@@ -112,4 +112,5 @@ Two data points from test set is passed via endpoint.py file for scoring. Result
 ## Screen Recording
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+1. Explored Pandas Profiling package for indepth exploratory data analysis.
+2. Appli
