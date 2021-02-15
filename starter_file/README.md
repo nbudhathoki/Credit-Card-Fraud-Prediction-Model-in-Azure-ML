@@ -100,6 +100,10 @@ Key is enabled for security, and application insights is enabled for tracking lo
 
 <kbd><img src= "./images/deployed_model.png"> </kbd> <br/>
 
+Clicking on app insights link can let us view the app insights (server availability, server requests and responses):
+
+<kbd><img src= "./images/app_insights.png"> </kbd> <br/>
+
 Two data points from test set is passed via endpoint.py file for scoring. Result in json is shown below:
 
 <kbd><img src= "./images/result_testdata.png"> </kbd> <br/>
