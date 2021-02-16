@@ -111,6 +111,19 @@ Two data points from test set is passed via endpoint.py file for scoring. Result
 
 ## Screen Recording
 
+[Link](https://www.youtube.com/watch?v=PCfMjb0ShBY) to the screen recording.
+
 ## Standout Suggestions
-1. Explored Pandas Profiling package for indepth exploratory data analysis.
-2. Appli
+1. Explored Pandas Profiling package for indepth exploratory data analysis. It helps us generate html report with descriptive stats for all variables, including interactions among variables, corelation, missing values, and samples. [More info on pandas profiling](https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd/). Screenshot can be found below:
+
+<kbd><img src= "./images/example_pp.png"> </kbd> <br/>
+
+2. Application insights is enabled, and log analytics is explored. There is a SQL like language KQL (Kusto Query Language), also called azure data explorer. The log analytics service connects with application insights telemetry data for performance and usage analysis. More information on log analytics can be found [here](https://docs.microsoft.com/en-us/azure/azure-monitor/log-query/log-analytics-tutorial). Snapshot is added below:
+
+<kbd><img src= "./images/log_analytics.png"> </kbd> <br/>
+
+## Future Improvements
+Time management was tough while working and parenting. I would like to explore more things in future:
+1. ONNX model: I would like to explore ONNX model, to integrate the model into code, and use machine learning in Windows apps and devices.
+2. Create an interactive web app in flask or streamlit to interact and use the model.
+
