@@ -24,8 +24,10 @@ The task in this project is to predict if the credit card transaction is a fraud
 ### Access
 The data is publicly available (link is added above in data section), so I am not uploading it in the project folder. I have uploaded the dataset to ML workspace. We can preview the data by clicking at 'Explore' tab. Both screenshots are attached. <br/>
 
+Screenshot showing data uploaded:
 <kbd><img src= "./images/dataset_uploaded.png"> </kbd> <br/>
 
+Screenshot showing Data Explore:
 <kbd><img src= "./images/data_preview.png"> </kbd> <br/>
 
 ### Exploratory Data Analysis
@@ -59,12 +61,15 @@ The best model selected is Voting ensemble with accuracy of 0.98.
 
 #### Run Details
 
+RunDetails showing AutoML experiment is running:
 <kbd><img src= "./images/automl_runwidget.png"> </kbd> <br/>
 
+RunDetails showing AutoML experiment is complete:
 <kbd><img src= "./images/automl_rundetails.png"> </kbd> <br/>
 
-#### Feature Importance
+#### Feature Importance 
 
+Screenshot showing feature ranking for Voting Ensemble model:
 <kbd><img src= "./images/top_features.png"> </kbd> <br/>
 
 ## Hyperparameter Tuning
@@ -81,8 +86,10 @@ I have used random parameter sampling. In random sampling, hyperparameter values
 
 ### Results
 
+RunDetails showing HyperDrive experiment is running:
 <kbd><img src= "./images/hyperdrive_running.png"> </kbd> <br/>
 
+RunDetails showing HyperDrive experiment is complete:
 <kbd><img src= "./images/hydrive_completed.png"> </kbd> <br/>
 
 ## Model Deployment
@@ -94,18 +101,22 @@ Even though the accuracy is little bit higher in hyperdrive model, I have select
 
 To deploy a model to Azure Container Instances, we need create a deployment configuration that describes the compute resources needed. For example, number of cores and memory. We also need an inference configuration, which describes the environment needed to host the model and web service.
 
+Screenshot showing AutoML model deployed as Azure Container Instance:
 <kbd><img src= "./images/aci_deploy.png"> </kbd> <br/>
 
-Key is enabled for security, and application insights is enabled for tracking logs. Screenshot from ML studio showing RestUI, and app insights link. 
+Key is enabled for security, and application insights is enabled for tracking logs. 
 
+Screenshot from ML studio showing RestUI, and app insights link: 
 <kbd><img src= "./images/deployed_model.png"> </kbd> <br/>
 
 Clicking on app insights link can let us view the app insights (server availability, server requests and responses):
 
+Screenshot showing appinsights logs:
 <kbd><img src= "./images/app_insights.png"> </kbd> <br/>
 
 Two data points from test set is passed via endpoint.py file for scoring. Result in json is shown below:
 
+Screenshot showing result from endpoint.py :
 <kbd><img src= "./images/result_testdata.png"> </kbd> <br/>
 
 
