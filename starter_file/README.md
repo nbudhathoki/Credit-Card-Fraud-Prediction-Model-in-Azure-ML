@@ -111,6 +111,8 @@ Two data points from test set is passed via endpoint.py file for scoring. Result
 
 ## Screen Recording
 
+[Link](https://www.youtube.com/watch?v=PCfMjb0ShBY) to the screen recording.
+
 ## Standout Suggestions
 1. Explored Pandas Profiling package for indepth exploratory data analysis. It helps us generate html report with descriptive stats for all variables, including interactions among variables, corelation, missing values, and samples. [More info on pandas profiling](https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd/). Screenshot can be found below:
 
