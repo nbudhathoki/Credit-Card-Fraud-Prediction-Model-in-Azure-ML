@@ -53,6 +53,9 @@ One important thing to mention is that I selected 'AUC weighted' method for prim
 
 ### Results
 
+AutoML completed screenshot with RunId:
+ <kbd><img src= "./images/automl_runid.png"> </kbd> 
+
 The best model selected is Voting ensemble with accuracy of 0.98.
 
 | **Confusion Matrix**| **ROC Curve** |
@@ -85,6 +88,9 @@ I am training Logistic regression model for hyperdrive method of modeling. Logis
 I have used random parameter sampling. In random sampling, hyperparameter values are randomly selected from the defined search space. It supports discrete and continuous hyperparameters. It also supports early termination of low-performance runs. Since random sampling selects random values from given range of values, the performance is fast.
 
 ### Results
+
+HyperDrive completed screenshot with RunId:
+ <kbd><img src= "./images/hydrive_runid.png"> </kbd> 
 
 RunDetails showing HyperDrive experiment is running:
 <kbd><img src= "./images/hyperdrive_running.png"> </kbd> <br/>
