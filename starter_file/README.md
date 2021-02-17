@@ -51,10 +51,22 @@ AutoMLConfig Class represents configuration for submitting an automated ML exper
 
 One important thing to mention is that I selected 'AUC weighted' method for primary metric instead of regular accuracy. This is because from EDA, I have learned that the classes are imbalanced. There are only 1% data for fraud vs non-fraud. AUC weighted metric performs better in this situation. When computing the weighted area under the ROC curve, weights vary with the values of the true positive rate (TPrate) among regions in a bid to focus on the accuracy of minority class that is more important in common.
 
+#### AutoML Configuration:
+| **AutoML Settings**| **Value Selected** |**Reason**|
+| ------- | ------ | ------|
+|experiment_timeout_minutes | 30 min| Time and resource constraint. This can be set to higher value if more resources can be allocated.|
+|primary_metric| AUC weighted| To handle the Class Imbalance.|
+|Task| Classification|Binary Classification problem.|
+|n_cross_validations|k=5| Validation set to avoid overfitting. |
+
+
 ### Results
 
 AutoML completed screenshot with RunId:
  <kbd><img src= "./images/automl_runid.png"> </kbd> 
+
+AutoML best model ranked (Top one is selected):
+<kbd><img src= "./images/automl_bestmodel1.png"> </kbd> 
 
 The best model selected is Voting ensemble with accuracy of 0.98.
 
@@ -87,10 +99,21 @@ I am training Logistic regression model for hyperdrive method of modeling. Logis
 
 I have used random parameter sampling. In random sampling, hyperparameter values are randomly selected from the defined search space. It supports discrete and continuous hyperparameters. It also supports early termination of low-performance runs. Since random sampling selects random values from given range of values, the performance is fast.
 
+#### HyperDrive Configuration:
+| **Hyperparameters**| **Value Selected** |**Reason**|
+| ------- | ------ | ------|
+| C | uniform (0.1,1)| Returns a value uniformly distributed between 0.1 to 1. This controls the regularization over range of given values.|
+|max_iters| choice(50,100,150,200)| Maximum iterations allowed to converge the algorithm. Randomly selects combination of C and max_iters to converge.|
+
+I have selected bandit policy for early termination. It defines an early termination policy based on slack criteria, and a frequency and delay interval for evaluation. Again the main reason for this policy selection is performance and saving resources. Any run that doesn't fall within the slack factor or slack amount of the evaluation metric with respect to the best performing run will be terminated, thus saving the compute resource. Concretely, the configuration used in my hyperdrive config will evaluate jobs every 1 step and will terminate jobs that are not within 10 percent slack of the best performing job at that particular step. On larger models, this strategy typically saves significant compute time with no impact on the performance of the best model trained.
+
 ### Results
 
 HyperDrive completed screenshot with RunId:
  <kbd><img src= "./images/hydrive_runid.png"> </kbd> 
+ 
+HyperDrive best model from all the child runs (Top one is selected):
+<kbd><img src= "./images/bestmodel1_hydrive.png"> </kbd> 
 
 RunDetails showing HyperDrive experiment is running:
 <kbd><img src= "./images/hyperdrive_running.png"> </kbd> <br/>
